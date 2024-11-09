@@ -5,7 +5,7 @@ PHP 8.2 introduces a new attribute in the global namespace named #[AllowDynamicP
 */
 function generateClass($propertyName, $propertyValue){
 	$clazz = new #[AllowDynamicProperties]
-	class{};
+	class extends Illuminate\Database\Eloquent\Model{};
 	
     $clazz->{$propertyName} = $propertyValue;
     return $clazz;
